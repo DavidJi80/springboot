@@ -6,8 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloJsonController {
+
     @RequestMapping("/getUser")
     public User getUser() {
+
         User user=new User();
         user.setUserName("小明");
         user.setPassword("xxxx");
