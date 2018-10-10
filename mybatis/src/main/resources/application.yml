@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://192.168.1.7:3306/mytest?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    username: xhsit
+    password: sit1818
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  type-aliases-package: com.github.davidji80.springboot.mybatis.model
+  mapper-locations: classpath:mapping/**/*.xml
