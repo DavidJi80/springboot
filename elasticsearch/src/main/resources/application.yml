@@ -1,0 +1,7 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch #默认配置
+      cluster-nodes: 192.168.169.135:9300
+      repositories:
+        enabled: true
