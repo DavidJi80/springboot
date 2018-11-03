@@ -14,6 +14,6 @@ public class RedisController {
     @RequestMapping("/set/{name}")
     public String sendMsgToMq(@PathVariable String name) {
         redis.opsForValue().set("abc",name);
-        return "123";
+        return "success";
     }
 }
