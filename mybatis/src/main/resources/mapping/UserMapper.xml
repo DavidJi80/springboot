@@ -20,11 +20,14 @@
     delete from t_user
     where user_id = #{userId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.github.davidji80.springboot.mybatis.model.User">
-    insert into t_user (user_id, user_name, password, 
+  <insert id="insert" parameterType="com.github.davidji80.springboot.mybatis.model.User"  useGeneratedKeys="true" keyProperty="userId" keyColumn="userId">
+    insert into t_user ( user_name, password,
       phone)
-    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+    values ( #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
       #{phone,jdbcType=VARCHAR})
+    <selectKey resultType="java.lang.Integer" keyProperty="userId" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
   </insert>
   <insert id="insertSelective" parameterType="com.github.davidji80.springboot.mybatis.model.User">
     insert into t_user

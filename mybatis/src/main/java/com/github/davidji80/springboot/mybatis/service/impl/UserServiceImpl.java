@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @CachePut(key="#result.userId")
     public User addUser(User user) {
-        userMapper.insertSelective(user);
+        userMapper.insert(user);
         /*//模拟抛出错误，测试事务
         String a = null;
         a.indexOf('c');*/
