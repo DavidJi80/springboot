@@ -79,4 +79,11 @@
       phone = #{phone,jdbcType=VARCHAR}
     where user_id = #{userId,jdbcType=INTEGER}
   </update>
+  <select id="selectByMobile" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_user
+    where phone = #{mobile,jdbcType=VARCHAR}
+    order by user_id desc limit 1
+  </select>
 </mapper>

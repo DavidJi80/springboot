@@ -7,6 +7,12 @@ spring:
     username: xhsit
     password: sit1818
     driver-class-name: com.mysql.jdbc.Driver
+  cache:
+    type: redis
+  redis:
+    database: 1
+    host: 192.168.1.7
+    port: 6379
 
 mybatis:
   type-aliases-package: com.github.davidji80.springboot.mybatis.model
