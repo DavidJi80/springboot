@@ -1,14 +1,20 @@
 package com.github.davidji80.springboot.mybatis.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+
 import java.io.Serializable;
 
+@Document(indexName = "user_index",type = "user")
 public class User implements Serializable {
+    @Id
     private Integer userId;
-
+    @Field
     private String userName;
-
+    @Field
     private String password;
-
+    @Field
     private String phone;
 
     public Integer getUserId() {

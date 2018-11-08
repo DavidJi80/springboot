@@ -1,5 +1,6 @@
 package com.github.davidji80.springboot.mybatis.service.impl;
 
+import com.github.davidji80.springboot.mybatis.esdao.UserRepository;
 import com.github.davidji80.springboot.mybatis.mapper.UserMapper;
 import com.github.davidji80.springboot.mybatis.model.User;
 import com.github.davidji80.springboot.mybatis.service.UserService;
@@ -18,6 +19,8 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private UserRepository userRepository;
 
     @Override
     @CachePut(key="#result.userId")
@@ -26,6 +29,7 @@ public class UserServiceImpl implements UserService {
         /*//模拟抛出错误，测试事务
         String a = null;
         a.indexOf('c');*/
+        userRepository.save(user);
         return user;
     }
 

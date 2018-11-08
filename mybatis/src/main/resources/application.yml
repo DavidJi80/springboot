@@ -13,6 +13,12 @@ spring:
     database: 1
     host: 192.168.1.7
     port: 6379
+  data:
+    elasticsearch:
+      cluster-name: docker-cluster
+      cluster-nodes: 192.168.1.8:9300
+      repositories:
+        enabled: true
 
 mybatis:
   type-aliases-package: com.github.davidji80.springboot.mybatis.model

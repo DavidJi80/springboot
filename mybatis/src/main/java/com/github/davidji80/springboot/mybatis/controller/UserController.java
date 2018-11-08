@@ -1,5 +1,6 @@
 package com.github.davidji80.springboot.mybatis.controller;
 
+import com.github.davidji80.springboot.mybatis.esdao.UserRepository;
 import com.github.davidji80.springboot.mybatis.model.User;
 import com.github.davidji80.springboot.mybatis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
