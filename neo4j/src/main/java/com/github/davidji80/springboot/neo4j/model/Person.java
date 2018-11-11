@@ -1,12 +1,11 @@
 package com.github.davidji80.springboot.neo4j.model;
 
-import org.neo4j.ogm.annotation.GraphId;
-import org.neo4j.ogm.annotation.NodeEntity;
-import org.neo4j.ogm.annotation.Property;
+import org.neo4j.ogm.annotation.*;
 
 @NodeEntity(label = "Person")
 public class Person {
-    @GraphId
+    @Id
+    @GeneratedValue
     private Long nodeId;
 
     @Property(name = "name")

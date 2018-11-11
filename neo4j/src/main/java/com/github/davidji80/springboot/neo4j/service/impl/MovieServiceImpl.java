@@ -12,6 +12,8 @@ import com.github.davidji80.springboot.neo4j.service.MovieServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class MovieServiceImpl implements MovieServer {
 
@@ -30,11 +32,11 @@ public class MovieServiceImpl implements MovieServer {
     }
     @Override
     public Person findOnePerson(long id){
-        return personRepository.findOne(id);
+        return personRepository.findById(id).get();
     }
     @Override
     public void deleteOnePerson(long id){
-        personRepository.delete(id);
+        personRepository.deleteById(id);
     }
     @Override
     public Movie addMovie(Movie movie){
@@ -42,7 +44,7 @@ public class MovieServiceImpl implements MovieServer {
     }
     @Override
     public Movie findOneMovie(long id){
-        return movieRepository.findOne(id);
+        return movieRepository.findById(id).get();
     }
     @Override
     public Directed directed(Directed directed){

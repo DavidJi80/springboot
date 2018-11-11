@@ -1,13 +1,11 @@
 package com.github.davidji80.springboot.neo4j.model;
 
-import org.neo4j.ogm.annotation.EndNode;
-import org.neo4j.ogm.annotation.GraphId;
-import org.neo4j.ogm.annotation.RelationshipEntity;
-import org.neo4j.ogm.annotation.StartNode;
+import org.neo4j.ogm.annotation.*;
 
 @RelationshipEntity(type = "DIRECTED")
 public class Directed {
-    @GraphId
+    @Id
+    @GeneratedValue
     private Long id;
 
     @StartNode

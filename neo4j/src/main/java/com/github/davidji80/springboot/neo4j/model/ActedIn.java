@@ -4,7 +4,7 @@ import org.neo4j.ogm.annotation.*;
 
 @RelationshipEntity(type = "ACTED_IN")
 public class ActedIn {
-    @GraphId
+    @Id @GeneratedValue
     private Long id;
 
     @Property(name = "roles")
