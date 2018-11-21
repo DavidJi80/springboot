@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>用户列表</title>
+</head>
+<body>
+<div style="width: 1000px;">
+    <table style="border-width: 1px;border-style: dashed;">
+        <tr>
+            <td>ID</td>
+            <td>性别</td>
+            <td>年龄</td>
+            <td>职业</td>
+            <td>邮编</td>
+            <td>推荐</td>
+        </tr>
+        <p th:each="user:${userList}">
+            <tr>
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.gender}"></td>
+                <td th:text="${user.age}"></td>
+                <td th:text="${user.occupation}"></td>
+                <td th:text="${user.zipCode}"></td>
+                <td><a th:href="'recommend?userid='+${user.id}">推荐</a></td>
+            </tr>
+        </p>
+    </table>
+    <a th:href="'userlist?pageno='+(${pageno}-1)">上一页</a>
+    <span th:text="'第 '+${pageno}+' 页'"></span>
+    <a th:href="'userlist?pageno='+(${pageno}+1)">下一页</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>电影推荐列表</title>
+</head>
+<body>
+<div style="width: 1000px;">
+    <p>已经看过的电影</p>
+    <table style="border-width: 1px;border-style: dashed;">
+        <tr>
+            <td>ID</td>
+            <td>电影名</td>
+            <td>分类</td>
+        </tr>
+        <p th:each="lookedMovie:${lookedMovies}">
+            <tr>
+                <td th:text="${lookedMovie.id}"></td>
+                <td th:text="${lookedMovie.title}"></td>
+                <td th:text="${lookedMovie.genres}"></td>
+            </tr>
+        </p>
+    </table>
+    <p>基于用户的协同过滤算法推荐的电影</p>
+    <table style="border-width: 1px;border-style: dashed;">
+        <tr>
+            <td>ID</td>
+            <td>电影名</td>
+            <td>分类</td>
+        </tr>
+        <p th:each="movieRBU:${moviesRBU}">
+            <tr>
+                <td th:text="${movieRBU.id}"></td>
+                <td th:text="${movieRBU.title}"></td>
+                <td th:text="${movieRBU.genres}"></td>
+            </tr>
+        </p>
+    </table>
+    <p>基于内容的协同过滤算法推荐的电影</p>
+    <table style="border-width: 1px;border-style: dashed;">
+        <tr>
+            <td>ID</td>
+            <td>电影名</td>
+            <td>分类</td>
+        </tr>
+        <p th:each="movieRBI:${moviesRBI}">
+            <tr>
+                <td th:text="${movieRBI.id}"></td>
+                <td th:text="${movieRBI.title}"></td>
+                <td th:text="${movieRBI.genres}"></td>
+            </tr>
+        </p>
+    </table>
+</div>
+</body>
+</html>
