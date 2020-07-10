@@ -1,1 +1,15 @@
 /.idea/*
+/elasticsearch/elasticsearch.iml
+/helloworld/helloworld.iml
+/mahout/mahout.iml
+/mybatis/mybatis.iml
+/neo4j/neo4j.iml
+/rabbitmq/rabbitmq.iml
+/redis/redis.iml
+/springboot.iml
+
+
+/actuator/target/*
+/actuator/actuator.iml
+
+/helloworld/target/*
