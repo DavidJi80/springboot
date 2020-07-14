@@ -1,6 +1,5 @@
 /.idea/*
 /elasticsearch/elasticsearch.iml
-/helloworld/helloworld.iml
 /mahout/mahout.iml
 /mybatis/mybatis.iml
 /neo4j/neo4j.iml
@@ -8,8 +7,14 @@
 /redis/redis.iml
 /springboot.iml
 
-
 /actuator/target/*
 /actuator/actuator.iml
 
 /helloworld/target/*
+/helloworld/helloworld.iml
+
+/release-getting-started/target/*
+/release-getting-started/release-getting-started.iml
+
+/aop/target/*
+/aop/aop.iml
