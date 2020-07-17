@@ -1,6 +1,6 @@
-package net.tongark.springboot.releasewebmvc.controller;
+package net.tongark.springboot.releasewebmvc.controllers;
 
-import net.tongark.springboot.releasewebmvc.model.User;
+import net.tongark.springboot.releasewebmvc.dto.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

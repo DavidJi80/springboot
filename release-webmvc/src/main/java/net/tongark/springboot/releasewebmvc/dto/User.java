@@ -1,4 +1,4 @@
-package net.tongark.springboot.releasewebmvc.model;
+package net.tongark.springboot.releasewebmvc.dto;
 
 public class User {
     private String name;

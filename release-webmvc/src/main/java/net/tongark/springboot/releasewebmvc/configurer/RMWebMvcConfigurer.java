@@ -1,4 +1,4 @@
-package net.tongark.springboot.releasewebmvc.config;
+package net.tongark.springboot.releasewebmvc.configurer;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
