@@ -6,8 +6,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.remoting.caucho.HessianServiceExporter;
 
-import javax.annotation.Resource;
-
 @Configuration
 public class HessianServiceConfigurer {
     @Autowired
