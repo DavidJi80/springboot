@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
 
-@Document(collation = "account")
+@Document( collection = "account")
 public class Account implements Serializable {
 
     @Id
@@ -32,7 +32,8 @@ public class Account implements Serializable {
     @Override
     public String toString() {
         return "Account{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", name='" + name + '\'' +
                 '}';
     }
 }

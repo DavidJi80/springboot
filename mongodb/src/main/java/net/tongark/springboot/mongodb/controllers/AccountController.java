@@ -21,7 +21,8 @@ public class AccountController {
     @GetMapping("/add/{name}")
     public void addAccount(@PathVariable String name){
         Account account=new Account();
-        account.setId((long) 1);
+        long radomID = (long) (Math.random()*1000000000);
+        account.setId(radomID);
         account.setName(name);
         mongoTemplate.insert(account);
         log.info("插入成功！");
