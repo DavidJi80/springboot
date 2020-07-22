@@ -1,6 +1,6 @@
 package net.tongark.springboot.releasekafka.controllers;
 
-import net.tongark.springboot.releasekafka.kafkaBeans.KafkaProducerBean;
+import net.tongark.springboot.releasekafka.kafkabeans.KafkaProducerBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

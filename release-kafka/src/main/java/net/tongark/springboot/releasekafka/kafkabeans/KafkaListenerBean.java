@@ -1,4 +1,4 @@
-package net.tongark.springboot.releasekafka.kafkaBeans;
+package net.tongark.springboot.releasekafka.kafkabeans;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
