@@ -1,7 +1,10 @@
 spring:
   data:
     elasticsearch:
-      cluster-name: elasticsearch #默认配置
-      cluster-nodes: 192.168.169.135:9300
+      cluster-name: docker-cluster
+      #必须和ES服务器配置文件config\elasticsearch.yml中的cluster.name一致
+      cluster-nodes: 192.168.1.8:19300
       repositories:
         enabled: true
+server:
+  port: 14500
