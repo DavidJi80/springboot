@@ -26,4 +26,9 @@ public class CacheController {
         return cacheService.cacheEvict(value);
     }
 
+    @RequestMapping("/CacheEvictAll")
+    public void cacheEvictAll() {
+        cacheService.cacheAllEvict();
+    }
+
 }
