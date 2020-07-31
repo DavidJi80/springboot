@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface  AccountService {
     List findAll();
-    int addAccount(Account account);
+    void addAccount(Account account);
 }

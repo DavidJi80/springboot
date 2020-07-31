@@ -18,6 +18,7 @@ public class AccountController {
         Account account=new Account();
         account.setName(name);
         accountService.addAccount(account);
+
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)

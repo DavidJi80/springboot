@@ -5,6 +5,7 @@ import net.tongark.springboot.releasesqljdbc.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -21,9 +22,10 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public int addAccount(Account account) {
+    @Transactional
+    public void addAccount(Account account) {
         String sql = "insert into t_account(name) values(?)";
         jdbcTemplate.update(sql, account.getName());
-        return 0;
+//        throw new RuntimeException("事务异常，回滚!");
     }
 }
